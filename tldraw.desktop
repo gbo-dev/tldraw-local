@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=tldraw
+Comment=Local whiteboard
+Exec=/home/g/tldraw-local/scripts/start.sh
+Type=Application
+Terminal=false
+# The tldraw logo is available in their GitHub repo under assets/.
+# Download an SVG (e.g. a watermark) and save it as tldraw-icon.svg
+# in the repo root to enable the app icon.
+# See: https://github.com/tldraw/tldraw/tree/main/assets
+Icon=/home/g/tldraw-local/tldraw-icon.svg
+Categories=Graphics;Office;

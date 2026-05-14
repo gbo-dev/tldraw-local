@@ -4,3 +4,4 @@ dist
 *.db
 .rooms
 .DS_Store
+tldraw-icon.svg

@@ -1,6 +1,6 @@
 # tldraw-local
 
-Local self-hosted tldraw whiteboard. Runs entirely offline, auto-saves your work, and shuts down when you're done.
+Local self-hosted [tldraw](https://github.com/tldraw/tldraw) whiteboard. Runs entirely offline, auto-saves your work, and shuts down when you're done.
 
 ## Quick start
 
@@ -8,16 +8,13 @@ Local self-hosted tldraw whiteboard. Runs entirely offline, auto-saves your work
 npm install && npm run dev:managed
 ```
 
-Or click the **tldraw** desktop entry to auto-start the server and open the browser.
-
 ## Features
 
-- **Full tldraw editor** — infinite canvas, drawing, shapes, text, arrows, sticky notes, images
-- **Auto-save** — persisted to IndexedDB via `persistenceKey`; survives refresh and restart
-- **Dark mode by default** — no blinding white screen
-- **Self-hosted fonts** — Inter (UI) + Caveat (handwriting) via `@fontsource`, no external CDN calls
-- **Auto-shutdown** — server quits after 15 minutes of inactivity; no lingering Node processes
-- **Desktop launcher** — `.desktop` entry for your app menu; starts server + opens browser in one click
+- **Full tldraw editor**: infinite canvas, drawing, shapes, text, arrows, sticky notes, images
+- **Auto-save**: persisted to IndexedDB via `persistenceKey`; survives refresh and restart
+- **Dark mode by default**: no blinding white screen
+- **Self-hosted fonts**: Inter (UI) + Caveat (handwriting) via `@fontsource`, no external CDN calls
+- **Auto-shutdown**: server quits after 15 minutes of inactivity; no lingering Node processes
 
 ## How auto-shutdown works
 
@@ -30,10 +27,8 @@ The dev server wraps Vite with an inactivity timer. The frontend sends a ping on
 
 ## Scripts
 
-- `npm run dev` — standard Vite dev server (no auto-shutdown)
-- `npm run dev:managed` — managed server with auto-shutdown
-- `npm run build` — production build
-- `npm run preview` — preview production build
+- `npm run dev`: standard Vite dev server (no auto-shutdown)
+- `npm run dev:managed`: managed server with auto-shutdown
 
 ## Desktop entry
 
@@ -43,6 +38,9 @@ Install the launcher to your app menu:
 cp tldraw.desktop ~/.local/share/applications/
 update-desktop-database ~/.local/share/applications/
 ```
+
+The desktop file references `tldraw-icon.svg` for the app icon. The tldraw logo assets
+are [available in their GitHub repo](https://github.com/tldraw/tldraw/tree/main/assets). Download an SVG and save it as `tldraw-icon.svg` in the repo root.
 
 ## Stack
 
