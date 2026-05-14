@@ -13,7 +13,7 @@ npm install && npm run dev:managed
 - **Full tldraw editor**: infinite canvas, drawing, shapes, text, arrows, sticky notes, images
 - **Auto-save**: persisted to IndexedDB via `persistenceKey`; survives refresh and restart
 - **Dark mode by default**: no blinding white screen
-- **Self-hosted fonts**: Inter (UI) + Caveat (handwriting) via `@fontsource`, no external CDN calls
+- **Self-hosted fonts**: Inter (UI) + Iosevka (monospace) + Caveat (handwriting) via `@fontsource`
 - **Auto-shutdown**: server quits after 15 minutes of inactivity; no lingering Node processes
 
 ## How auto-shutdown works
@@ -46,5 +46,5 @@ are [available in their GitHub repo](https://github.com/tldraw/tldraw/tree/main/
 
 - tldraw 5.x
 - React 19 + Vite
-- Inter + Caveat fonts (self-hosted via @fontsource)
+- Inter + Iosevka + Caveat fonts (self-hosted via @fontsource)
 - IndexedDB persistence

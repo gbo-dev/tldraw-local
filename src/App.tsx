@@ -1,4 +1,4 @@
-import { atom, TLUserPreferences, Tldraw } from "tldraw";
+import { atom, DEFAULT_THEME, TLUserPreferences, Tldraw } from "tldraw";
 import "tldraw/tldraw.css";
 import { useActivityPing } from "./useActivityPing";
 
@@ -12,12 +12,25 @@ const user = {
   setUserPreferences: (prefs: TLUserPreferences) => userPreferences.set(prefs),
 };
 
+const themes = {
+  default: {
+    ...DEFAULT_THEME,
+    fonts: {
+      ...DEFAULT_THEME.fonts,
+      mono: {
+        fontFamily: '"Iosevka", monospace',
+        faces: [],
+      },
+    },
+  },
+} satisfies Partial<import("tldraw").TLThemes>;
+
 export default function App() {
   useActivityPing();
 
   return (
     <div style={{ position: "fixed", inset: 0 }}>
-      <Tldraw persistenceKey="tldraw-local" user={user} />
+      <Tldraw persistenceKey="tldraw-local" user={user} themes={themes} />
     </div>
   );
 }
