@@ -1,0 +1,6 @@
+node_modules
+dist
+.vite
+*.db
+.rooms
+.DS_Store
